@@ -1,10 +1,13 @@
 :root {
   --background: #10131a;
-  --stripe: #281018;
   --accent: #a8ff35;
   --light-text: #ffffff;
   --muted-text: #b9c0cc;
   --card-background: #1a202c;
+}
+
+html {
+  overflow-y: scroll;
 }
 
 body {
@@ -17,6 +20,7 @@ body {
 .site-nav {
   background: transparent;
   padding: 24px 0;
+  min-height: 90px;
 }
 
 .navbar-brand,
@@ -29,6 +33,11 @@ body {
   color: var(--accent) !important;
 }
 
+.nav-link,
+.nav-link.active {
+  font-weight: 400;
+}
+
 .navbar-toggler {
   border-color: var(--accent);
 }
@@ -38,13 +47,7 @@ body {
   min-height: calc(100vh - 90px);
   display: flex;
   align-items: center;
-  background: repeating-linear-gradient(
-    90deg,
-    var(--background) 0px,
-    var(--background) 70px,
-    var(--stripe) 70px,
-    var(--stripe) 140px
-  );
+  background-color: var(--background);
 }
 
 .hero-section h1,
