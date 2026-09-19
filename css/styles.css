@@ -1,0 +1,109 @@
+:root {
+  --background: #10131a;
+  --stripe: #281018;
+  --accent: #a8ff35;
+  --light-text: #ffffff;
+  --muted-text: #b9c0cc;
+  --card-background: #1a202c;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--light-text);
+  font-family: Arial, sans-serif;
+}
+
+.site-nav {
+  background: transparent;
+  padding: 24px 0;
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--light-text) !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent) !important;
+}
+
+.navbar-toggler {
+  border-color: var(--accent);
+}
+
+.hero-section,
+.page-section {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--background) 0px,
+    var(--background) 70px,
+    var(--stripe) 70px,
+    var(--stripe) 140px
+  );
+}
+
+.hero-section h1,
+.page-section h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.hero-section .lead,
+.page-section p {
+  max-width: 650px;
+  color: var(--muted-text);
+  font-size: 1.4rem;
+}
+
+.btn-accent {
+  margin-top: 20px;
+  background-color: var(--accent);
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 16px 28px;
+  font-weight: 700;
+}
+
+.btn-accent:hover {
+  background-color: #c5ff70;
+  color: #000;
+}
+
+.skills-card,
+.contact-card {
+  background-color: var(--card-background);
+  border: 1px solid #334155;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.skills-card h2,
+.contact-card h2 {
+  color: var(--accent);
+}
+
+.skills-card li {
+  color: var(--muted-text);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.form-control {
+  background-color: #1a202c;
+  color: white;
+  border: 1px solid #475569;
+}
+
+.form-control:focus {
+  background-color: #1a202c;
+  color: white;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(168, 255, 53, 0.25);
+}
